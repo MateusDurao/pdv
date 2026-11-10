@@ -10,7 +10,7 @@
 
 <header class="cabecalho">
     <div class="marca">
-        <div class="logo">🛒</div>
+        <div class="logo">P</div>
         PDV Simples
     </div>
 
@@ -38,7 +38,7 @@
                 </div>
 
                 <div class="campo-busca">
-                    <input type="text" id="busca" placeholder="🔍  Buscar por nome ou código de barras..." autocomplete="off">
+                    <input type="text" id="busca" placeholder="Buscar por nome ou código de barras..." autocomplete="off">
                 </div>
 
                 <div class="grade-produtos" id="gradeProdutos"></div>
@@ -47,7 +47,7 @@
             <!-- Carrinho -->
             <div class="painel">
                 <div class="titulo-painel">
-                    <span>🧾 Carrinho</span>
+                    <span>Carrinho</span>
                     <button type="button" class="botao botao-cinza botao-pequeno" id="botaoLimpar">Limpar</button>
                 </div>
 
@@ -74,13 +74,13 @@
                     </div>
 
                     <div class="formas-pagamento" id="formasPagamento">
-                        <button type="button" data-forma="dinheiro" class="escolhida">💵 Dinheiro</button>
-                        <button type="button" data-forma="pix">🔵 Pix</button>
-                        <button type="button" data-forma="cartao">💳 Cartão</button>
-                        <button type="button" data-forma="fiado">📝 Fiado</button>
+                        <button type="button" data-forma="dinheiro" class="escolhida">Dinheiro</button>
+                        <button type="button" data-forma="pix">Pix</button>
+                        <button type="button" data-forma="cartao">Cartão</button>
+                        <button type="button" data-forma="fiado">Fiado</button>
                     </div>
 
-                    <button type="button" class="botao botao-verde" id="botaoFinalizar">✔ Finalizar Venda</button>
+                    <button type="button" class="botao botao-verde" id="botaoFinalizar">Finalizar Venda</button>
                 </div>
             </div>
 
@@ -93,7 +93,7 @@
 
             <div class="painel" style="margin-bottom:18px">
                 <div class="titulo-painel">
-                    <span id="tituloFormulario">➕ Novo produto</span>
+                    <span id="tituloFormulario">Novo produto</span>
                     <button type="button" class="botao botao-cinza botao-pequeno escondido" id="botaoCancelarEdicao">Cancelar edição</button>
                 </div>
 
@@ -132,7 +132,7 @@
             <div class="painel">
                 <div class="barra-acoes">
                     <div class="busca-tabela">
-                        <input type="text" id="buscaProdutos" placeholder="🔍 Buscar produto...">
+                        <input type="text" id="buscaProdutos" placeholder="Buscar produto...">
                     </div>
                     <span class="contador-tabela" id="contadorProdutos"></span>
                 </div>
@@ -161,7 +161,7 @@
 
             <div class="painel" style="margin-bottom:18px">
                 <div class="titulo-painel">
-                    <span id="tituloFormularioCliente">➕ Novo cliente</span>
+                    <span id="tituloFormularioCliente">Novo cliente</span>
                     <button type="button" class="botao botao-cinza botao-pequeno escondido" id="botaoCancelarEdicaoCliente">Cancelar edição</button>
                 </div>
 
@@ -200,7 +200,7 @@
             <div class="painel">
                 <div class="barra-acoes">
                     <div class="busca-tabela">
-                        <input type="text" id="buscaClientes" placeholder="🔍 Buscar por nome, CPF, telefone ou e-mail...">
+                        <input type="text" id="buscaClientes" placeholder="Buscar por nome, CPF, telefone ou e-mail...">
                     </div>
                     <span class="contador-tabela" id="contadorClientes"></span>
                 </div>
@@ -242,10 +242,10 @@
                     <label for="filtroPagamento">Pagamento</label>
                     <select id="filtroPagamento" class="campo-cliente">
                         <option value="">Todos</option>
-                        <option value="dinheiro">💵 Dinheiro</option>
-                        <option value="pix">🔵 Pix</option>
-                        <option value="cartao">💳 Cartão</option>
-                        <option value="fiado">📝 Fiado</option>
+                        <option value="dinheiro">Dinheiro</option>
+                        <option value="pix">Pix</option>
+                        <option value="cartao">Cartão</option>
+                        <option value="fiado">Fiado</option>
                     </select>
                 </div>
 
@@ -257,9 +257,9 @@
                 </div>
 
                 <div class="relatorio-acoes">
-                    <button type="button" class="botao botao-primario botao-pequeno" id="botaoFiltrar">🔎 Filtrar</button>
+                    <button type="button" class="botao botao-primario botao-pequeno" id="botaoFiltrar">Filtrar</button>
                     <button type="button" class="botao botao-cinza botao-pequeno" id="botaoLimparFiltros">Limpar</button>
-                    <button type="button" class="botao botao-cinza botao-pequeno" id="botaoExportarCsv">⬇ CSV</button>
+                    <button type="button" class="botao botao-cinza botao-pequeno" id="botaoExportarCsv">Exportar CSV</button>
                 </div>
             </div>
 
@@ -285,14 +285,14 @@
             <div class="relatorio-grade">
                 <div class="painel">
                     <div class="titulo-painel">
-                        <span>🏆 Produtos mais vendidos</span>
+                        <span>Produtos mais vendidos</span>
                     </div>
                     <div class="lista-ranking" id="rankingProdutos"></div>
                 </div>
 
                 <div class="painel">
                     <div class="titulo-painel">
-                        <span>💳 Por forma de pagamento</span>
+                        <span>Por forma de pagamento</span>
                     </div>
                     <div class="lista-ranking" id="rankingPagamentos"></div>
                 </div>
@@ -300,7 +300,7 @@
 
             <div class="painel">
                 <div class="titulo-painel">
-                    <span>📊 Vendas do período</span>
+                    <span>Vendas do período</span>
                     <span class="dica" id="periodoRelatorio"></span>
                 </div>
 
@@ -329,7 +329,7 @@
 <div class="fundo-janela escondido" id="janelaDetalhes">
     <div class="janela">
         <div class="titulo-painel">
-            <span id="tituloDetalhes">🧾 Detalhes da venda</span>
+            <span id="tituloDetalhes">Detalhes da venda</span>
             <button type="button" class="botao botao-cinza botao-pequeno" id="botaoFecharDetalhes">Fechar</button>
         </div>
         <div id="conteudoDetalhes"></div>
@@ -338,16 +338,6 @@
 
 <!-- Comemoração da venda -->
 <div class="fundo-comemoracao" id="fundoComemoracao">
-    <span class="confete"></span>
-    <span class="confete"></span>
-    <span class="confete"></span>
-    <span class="confete"></span>
-    <span class="confete"></span>
-    <span class="confete"></span>
-    <span class="confete"></span>
-    <span class="confete"></span>
-    <span class="confete"></span>
-
     <div class="comemoracao">
         <img src="/images/ai-que-delicia.jpg" alt="Ai que delícia, cara" class="imagem-comemoracao">
 

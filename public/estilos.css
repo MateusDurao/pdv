@@ -632,9 +632,6 @@ input, select { font-family: inherit; }
 .texto-comemoracao p { color: var(--texto-fraco); margin-top: 6px; font-weight: 600; }
 .texto-comemoracao .detalhe-venda-comemoracao { color: var(--verde); font-weight: 800; }
 
-/* Confete simplificado */
-.confete { display: none; }
-
 /* ---------- Clientes / Relatórios ---------- */
 
 .formulario-cliente { grid-template-columns: 2fr 1fr 1fr 1.4fr 2fr auto; }

@@ -30,7 +30,7 @@ function escapar(texto) {
 let tempoAviso = null;
 function mostrarAviso(mensagem, erro = false) {
     const aviso = document.getElementById('aviso');
-    aviso.textContent = (erro ? '⚠️ ' : '✅ ') + mensagem;
+    aviso.textContent = mensagem;
     aviso.className = 'aviso aparecido' + (erro ? ' erro' : '');
     clearTimeout(tempoAviso);
     tempoAviso = setTimeout(() => aviso.className = 'aviso', 3200);
@@ -227,7 +227,7 @@ function desenharCarrinho() {
                 <button type="button" onclick="mudarQuantidade(${indice}, -1)">−</button>
                 <span class="qtde">${item.quantidade}</span>
                 <button type="button" onclick="mudarQuantidade(${indice}, 1)">+</button>
-                <button type="button" class="remover" onclick="removerItem(${indice})">🗑</button>
+                <button type="button" class="remover" onclick="removerItem(${indice})" title="Remover item">×</button>
             </div>`;
         lista.appendChild(li);
     });
@@ -292,7 +292,7 @@ async function finalizarVenda() {
         mostrarAviso('Falha ao finalizar a venda.', true);
     } finally {
         botao.disabled = false;
-        botao.textContent = '✔ Finalizar Venda';
+        botao.textContent = 'Finalizar Venda';
     }
 }
 
@@ -353,8 +353,8 @@ function desenharTabelaProdutos() {
                 </span>
             </td>
             <td>
-                <button type="button" class="botao botao-cinza botao-pequeno" data-acao="editar">✏️ Editar</button>
-                <button type="button" class="botao botao-vermelho botao-pequeno" data-acao="excluir">🗑 Excluir</button>
+                <button type="button" class="botao botao-cinza botao-pequeno" data-acao="editar">Editar</button>
+                <button type="button" class="botao botao-vermelho botao-pequeno" data-acao="excluir">Excluir</button>
             </td>`;
 
         linha.querySelector('[data-acao="editar"]').addEventListener('click', () => editarProduto(produto.id));
@@ -381,7 +381,7 @@ async function editarProduto(id) {
     document.getElementById('campoPreco').value = String(produto.preco).replace('.', ',');
     document.getElementById('campoEstoque').value = produto.estoque;
 
-    document.getElementById('tituloFormulario').textContent = '✏️ Editar produto';
+    document.getElementById('tituloFormulario').textContent = 'Editar produto';
     document.getElementById('botaoSalvarProduto').textContent = 'Salvar alterações';
     document.getElementById('botaoCancelarEdicao').classList.remove('escondido');
 
@@ -397,7 +397,7 @@ function limparFormularioProduto() {
     document.getElementById('campoPreco').value = '';
     document.getElementById('campoEstoque').value = 0;
 
-    document.getElementById('tituloFormulario').textContent = '➕ Novo produto';
+    document.getElementById('tituloFormulario').textContent = 'Novo produto';
     document.getElementById('botaoSalvarProduto').textContent = 'Cadastrar';
     document.getElementById('botaoCancelarEdicao').classList.add('escondido');
 }
@@ -499,8 +499,8 @@ function desenharTabelaClientes() {
             <td>${escapar(cliente.email || '—')}</td>
             <td>${escapar(cliente.endereco || '—')}</td>
             <td>
-                <button type="button" class="botao botao-cinza botao-pequeno" data-acao="editar">✏️ Editar</button>
-                <button type="button" class="botao botao-vermelho botao-pequeno" data-acao="excluir">🗑 Excluir</button>
+                <button type="button" class="botao botao-cinza botao-pequeno" data-acao="editar">Editar</button>
+                <button type="button" class="botao botao-vermelho botao-pequeno" data-acao="excluir">Excluir</button>
             </td>`;
 
         linha.querySelector('[data-acao="editar"]').addEventListener('click', () => editarCliente(cliente.id));
@@ -527,7 +527,7 @@ async function editarCliente(id) {
     document.getElementById('campoClienteEmail').value = cliente.email || '';
     document.getElementById('campoClienteEndereco').value = cliente.endereco || '';
 
-    document.getElementById('tituloFormularioCliente').textContent = '✏️ Editar cliente';
+    document.getElementById('tituloFormularioCliente').textContent = 'Editar cliente';
     document.getElementById('botaoSalvarCliente').textContent = 'Salvar alterações';
     document.getElementById('botaoCancelarEdicaoCliente').classList.remove('escondido');
 
@@ -543,7 +543,7 @@ function limparFormularioCliente() {
     document.getElementById('campoClienteEmail').value = '';
     document.getElementById('campoClienteEndereco').value = '';
 
-    document.getElementById('tituloFormularioCliente').textContent = '➕ Novo cliente';
+    document.getElementById('tituloFormularioCliente').textContent = 'Novo cliente';
     document.getElementById('botaoSalvarCliente').textContent = 'Cadastrar';
     document.getElementById('botaoCancelarEdicaoCliente').classList.add('escondido');
 }
@@ -636,10 +636,10 @@ async function carregarClientesParaVenda() {
    ============================================================ */
 
 const nomesFormas = {
-    dinheiro: '💵 Dinheiro',
-    pix: '🔵 Pix',
-    cartao: '💳 Cartão',
-    fiado: '📝 Fiado',
+    dinheiro: 'Dinheiro',
+    pix: 'Pix',
+    cartao: 'Cartão',
+    fiado: 'Fiado',
 };
 
 function filtrosRelatorio() {
@@ -752,7 +752,7 @@ function desenharTabelaVendas(vendas) {
             <td>${nomesFormas[venda.forma_pagamento] || escapar(venda.forma_pagamento)}</td>
             <td>${formatarDinheiro(venda.desconto)}</td>
             <td><span class="etiqueta etiqueta-verde">${formatarDinheiro(venda.total)}</span></td>
-            <td><button type="button" class="botao botao-cinza botao-pequeno">👁 Ver</button></td>`;
+            <td><button type="button" class="botao botao-cinza botao-pequeno">Ver</button></td>`;
 
         linha.querySelector('button').addEventListener('click', () => abrirDetalhesVenda(venda.id));
         corpo.appendChild(linha);
@@ -825,7 +825,7 @@ async function abrirDetalhesVenda(id) {
         </tr>`).join('');
 
     document.getElementById('tituloDetalhes').textContent =
-        `🧾 Venda #${venda.id} — ${formatarData(venda.criado_em)}`;
+        `Venda #${venda.id} — ${formatarData(venda.criado_em)}`;
 
     document.getElementById('conteudoDetalhes').innerHTML = `
         <table class="tabela">

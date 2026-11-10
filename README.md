@@ -143,7 +143,7 @@ O carrinho é o núcleo operacional do PDV. O CRUD é aplicado aos **itens do ca
 | **Create** | Clicar no produto (ou digitar o código e apertar Enter) adiciona o item |
 | **Read** | Lista de itens, quantidades, subtotais e total em tempo real |
 | **Update** | Botões **+ / −** alteram a quantidade; campo de desconto recalcula o total |
-| **Delete** | Botão 🗑 remove um item; botão **Limpar** esvazia o carrinho |
+| **Delete** | Botão de remover item; botão **Limpar** esvazia o carrinho |
 
 Recursos adicionais:
 
@@ -166,7 +166,7 @@ Tela **Relatórios**, com filtros e indicadores. Por natureza é uma tela de lei
 | **Ranking de produtos** | Produtos mais vendidos no período |
 | **Ranking por pagamento** | Distribuição por forma de pagamento |
 | **Tabela de vendas** | Vendas do período com cliente e detalhes |
-| **Exportação CSV** | Botão **⬇ CSV** gera o arquivo com separador `;` e acentuação correta |
+| **Exportação CSV** | Botão **Exportar CSV** gera o arquivo com separador `;` e acentuação correta |
 
 Endpoint: `GET /api/relatorios/vendas?data_inicio=&data_fim=&forma_pagamento=&cliente_id=`
 
