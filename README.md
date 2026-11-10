@@ -1,12 +1,14 @@
 # PDV Simples — MVC + POO + Design Patterns
 
-Sistema de Ponto de Venda (PDV) desenvolvido em **PHP 8 + SQLite**, com interface moderna, código todo em português e os três CRUDs pedidos no trabalho:
+Sistema de Ponto de Venda (PDV) desenvolvido em **PHP 8 + SQLite**, com interface clara (tema branco), código todo em português e os três CRUDs pedidos no trabalho:
 
 1. **Cadastro de Clientes**
 2. **Carrinho de Vendas**
 3. **Relatórios de Vendas**
 
 O projeto aplica **arquitetura MVC**, **Programação Orientada a Objetos (POO)** e **Design Patterns** clássicos, sem frameworks externos.
+
+**Autor:** Mateus Henrique Durão Barbosa — [github.com/MateusDurao](https://github.com/MateusDurao)
 
 ---
 
@@ -298,7 +300,7 @@ git init
 git add .
 git commit -m "PDV com MVC, POO, design patterns e CRUDs de clientes, carrinho e relatorios"
 git branch -M main
-git remote add origin https://github.com/SEU-USUARIO/pdv.git
+git remote add origin https://github.com/MateusDurao/pdv.git
 git push -u origin main
 ```
 
