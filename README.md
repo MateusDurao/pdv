@@ -209,7 +209,7 @@ pdv/
 │   ├── router.php                 # router do servidor embutido
 │   ├── .htaccess                  # reescrita para Apache
 │   ├── app.js                     # lógica do frontend
-│   ├── estilos.css                # tema escuro
+│   ├── estilos.css                # tema claro e simples
 │   └── images/
 │       └── ai-que-delicia.jpg     # comemoração da venda
 ├── iniciar.bat

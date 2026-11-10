@@ -1,34 +1,35 @@
 /* ============================================================
-   PDV Simples - Tema escuro moderno
+   PDV Simples - Tema claro e simples
    ============================================================ */
 
 :root {
-    --fundo: #0b0f1a;
-    --fundo-claro: #111827;
-    --cartao: #161d2f;
-    --cartao-alto: #1c2540;
-    --borda: #2a3654;
-    --texto: #e7ecf5;
-    --texto-fraco: #8b96ad;
-    --primaria: #6c5ce7;
-    --primaria-clara: #8b7df0;
-    --verde: #00c896;
-    --vermelho: #ff5f6d;
-    --sombra: 0 10px 30px rgba(0, 0, 0, 0.45);
-    --raio: 14px;
+    --fundo: #ffffff;
+    --fundo-suave: #f7f7f8;
+    --cartao: #ffffff;
+    --cartao-alto: #f2f3f5;
+    --borda: #e4e4e7;
+    --borda-forte: #d4d4d8;
+    --texto: #18181b;
+    --texto-fraco: #71717a;
+    --primaria: #18181b;
+    --primaria-clara: #3f3f46;
+    --verde: #15803d;
+    --vermelho: #dc2626;
+    --sombra: 0 1px 2px rgba(0, 0, 0, 0.04);
+    --raio: 10px;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
     font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-    background: radial-gradient(1200px 800px at 80% -10%, #1b2d5e 0%, var(--fundo) 55%);
+    background: var(--fundo);
     color: var(--texto);
     min-height: 100vh;
 }
 
 button { font-family: inherit; cursor: pointer; }
-input { font-family: inherit; }
+input, select { font-family: inherit; }
 
 /* ---------- Barra superior ---------- */
 
@@ -38,8 +39,7 @@ input { font-family: inherit; }
     justify-content: space-between;
     gap: 16px;
     padding: 14px 24px;
-    background: rgba(17, 24, 39, 0.8);
-    backdrop-filter: blur(10px);
+    background: var(--fundo);
     border-bottom: 1px solid var(--borda);
     position: sticky;
     top: 0;
@@ -57,33 +57,32 @@ input { font-family: inherit; }
 .marca .logo {
     width: 38px;
     height: 38px;
-    border-radius: 12px;
+    border-radius: 10px;
     display: grid;
     place-items: center;
     font-size: 19px;
-    background: linear-gradient(135deg, var(--primaria), #4f8cff);
-    box-shadow: 0 6px 16px rgba(108, 92, 231, 0.45);
+    background: var(--cartao-alto);
+    border: 1px solid var(--borda);
 }
 
-.navegacao { display: flex; gap: 8px; }
+.navegacao { display: flex; gap: 6px; }
 
 .navegacao button {
     color: var(--texto-fraco);
     background: none;
     border: none;
     padding: 9px 16px;
-    border-radius: 10px;
+    border-radius: 8px;
     font-weight: 600;
     font-size: 14px;
-    transition: 0.2s;
+    transition: 0.15s;
 }
 
-.navegacao button:hover { color: var(--texto); background: var(--cartao-alto); }
+.navegacao button:hover { color: var(--texto); background: var(--fundo-suave); }
 
 .navegacao button.ativo {
-    color: #fff;
-    background: linear-gradient(135deg, var(--primaria), #4f8cff);
-    box-shadow: 0 4px 12px rgba(108, 92, 231, 0.4);
+    color: var(--texto);
+    background: var(--cartao-alto);
 }
 
 .relogio {
@@ -138,19 +137,19 @@ input { font-family: inherit; }
 
 .campo-busca input {
     width: 100%;
-    background: var(--fundo-claro);
-    border: 1px solid var(--borda);
-    border-radius: 10px;
+    background: var(--fundo);
+    border: 1px solid var(--borda-forte);
+    border-radius: 8px;
     color: var(--texto);
-    padding: 12px 14px;
+    padding: 11px 13px;
     font-size: 15px;
     outline: none;
-    transition: 0.2s;
+    transition: 0.15s;
 }
 
 .campo-busca input:focus {
-    border-color: var(--primaria-clara);
-    box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.25);
+    border-color: var(--primaria);
+    box-shadow: 0 0 0 3px rgba(24, 24, 27, 0.08);
 }
 
 .campo-busca input::placeholder { color: var(--texto-fraco); }
@@ -167,12 +166,12 @@ input { font-family: inherit; }
 }
 
 .cartao-produto {
-    background: var(--fundo-claro);
+    background: var(--fundo);
     border: 1px solid var(--borda);
-    border-radius: 12px;
+    border-radius: 8px;
     padding: 14px;
     cursor: pointer;
-    transition: 0.18s;
+    transition: 0.15s;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -181,9 +180,8 @@ input { font-family: inherit; }
 }
 
 .cartao-produto:hover {
-    transform: translateY(-3px);
-    border-color: var(--primaria-clara);
-    background: var(--cartao-alto);
+    border-color: var(--borda-forte);
+    background: var(--fundo-suave);
 }
 
 .cartao-produto .emoji-produto { font-size: 26px; line-height: 1; }
@@ -206,7 +204,7 @@ input { font-family: inherit; }
 .cartao-produto .estoque {
     font-size: 11px;
     color: var(--texto-fraco);
-    background: var(--cartao);
+    background: var(--cartao-alto);
     border-radius: 20px;
     padding: 3px 8px;
 }
@@ -244,28 +242,28 @@ input { font-family: inherit; }
 .item-controles button {
     width: 28px;
     height: 28px;
-    border-radius: 8px;
-    border: 1px solid var(--borda);
-    background: var(--cartao-alto);
+    border-radius: 6px;
+    border: 1px solid var(--borda-forte);
+    background: var(--fundo);
     color: var(--texto);
     font-weight: 800;
     font-size: 15px;
     transition: 0.15s;
 }
 
-.item-controles button:hover { background: var(--primaria); border-color: var(--primaria); }
+.item-controles button:hover { background: var(--cartao-alto); }
 
 .item-controles .qtde {
     min-width: 46px;
     text-align: center;
-    background: var(--fundo-claro);
-    border-radius: 8px;
+    background: var(--fundo-suave);
+    border-radius: 6px;
     padding: 4px 6px;
     font-weight: 700;
     font-size: 13px;
 }
 
-.item-controles .remover:hover { background: var(--vermelho); border-color: var(--vermelho); }
+.item-controles .remover:hover { background: var(--vermelho); border-color: var(--vermelho); color: #fff; }
 
 .vazio {
     color: var(--texto-fraco);
@@ -280,7 +278,7 @@ input { font-family: inherit; }
 .area-total {
     padding: 16px 18px;
     border-top: 1px solid var(--borda);
-    background: linear-gradient(180deg, transparent, rgba(108, 92, 231, 0.08));
+    background: var(--fundo-suave);
 }
 
 .area-total .linha {
@@ -294,9 +292,9 @@ input { font-family: inherit; }
 
 .campo-desconto {
     width: 110px;
-    background: var(--fundo-claro);
-    border: 1px solid var(--borda);
-    border-radius: 8px;
+    background: var(--fundo);
+    border: 1px solid var(--borda-forte);
+    border-radius: 6px;
     color: var(--texto);
     padding: 4px 8px;
     text-align: right;
@@ -309,7 +307,7 @@ input { font-family: inherit; }
     align-items: center;
     margin-top: 10px;
     padding-top: 12px;
-    border-top: 1px dashed var(--borda);
+    border-top: 1px dashed var(--borda-forte);
     font-size: 22px;
     font-weight: 800;
 }
@@ -319,45 +317,40 @@ input { font-family: inherit; }
 /* ---------- Botões ---------- */
 
 .botao {
-    border: none;
-    border-radius: 10px;
-    padding: 13px 18px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    padding: 12px 18px;
     font-size: 15px;
-    font-weight: 800;
+    font-weight: 700;
     color: #fff;
-    transition: 0.18s;
+    transition: 0.15s;
 }
 
-.botao:active { transform: scale(0.97); }
+.botao:active { transform: scale(0.98); }
 .botao:disabled { opacity: 0.5; cursor: not-allowed; }
 
-.botao-primario {
-    background: linear-gradient(135deg, var(--primaria), #4f8cff);
-    box-shadow: 0 6px 16px rgba(108, 92, 231, 0.4);
-}
-
-.botao-primario:hover:not(:disabled) { filter: brightness(1.12); }
+.botao-primario { background: var(--primaria); }
+.botao-primario:hover:not(:disabled) { background: var(--primaria-clara); }
 
 .botao-verde {
-    background: linear-gradient(135deg, #00b386, var(--verde));
-    box-shadow: 0 6px 16px rgba(0, 200, 150, 0.35);
+    background: var(--verde);
     width: 100%;
-    font-size: 17px;
+    font-size: 16px;
     margin-top: 12px;
 }
 
-.botao-verde:hover:not(:disabled) { filter: brightness(1.1); }
+.botao-verde:hover:not(:disabled) { background: #166534; }
 
 .botao-cinza {
-    background: var(--cartao-alto);
-    border: 1px solid var(--borda);
+    background: var(--fundo);
+    border: 1px solid var(--borda-forte);
     color: var(--texto);
 }
 
-.botao-cinza:hover { background: var(--borda); }
+.botao-cinza:hover { background: var(--fundo-suave); }
 
 .botao-vermelho { background: var(--vermelho); }
-.botao-vermelho:hover { filter: brightness(1.1); }
+.botao-vermelho:hover { background: #b91c1c; }
 
 .botao-pequeno { padding: 7px 13px; font-size: 12px; }
 
@@ -371,9 +364,9 @@ input { font-family: inherit; }
 }
 
 .formas-pagamento button {
-    background: var(--fundo-claro);
-    border: 1.5px solid var(--borda);
-    border-radius: 10px;
+    background: var(--fundo);
+    border: 1px solid var(--borda-forte);
+    border-radius: 8px;
     color: var(--texto-fraco);
     padding: 10px 4px;
     font-size: 12px;
@@ -381,10 +374,12 @@ input { font-family: inherit; }
     transition: 0.15s;
 }
 
+.formas-pagamento button:hover { background: var(--fundo-suave); }
+
 .formas-pagamento button.escolhida {
-    border-color: var(--verde);
-    color: var(--verde);
-    background: rgba(0, 200, 150, 0.1);
+    border-color: var(--primaria);
+    color: var(--texto);
+    background: var(--cartao-alto);
 }
 
 /* ---------- Tabelas ---------- */
@@ -405,14 +400,15 @@ input { font-family: inherit; }
     text-transform: uppercase;
     letter-spacing: 0.06em;
     border-bottom: 1px solid var(--borda);
+    background: var(--fundo-suave);
 }
 
 .tabela td {
     padding: 13px 14px;
-    border-bottom: 1px solid rgba(42, 54, 84, 0.5);
+    border-bottom: 1px solid var(--borda);
 }
 
-.tabela tr:hover td { background: rgba(108, 92, 231, 0.06); }
+.tabela tr:hover td { background: var(--fundo-suave); }
 
 .tabela .vazio { padding: 28px; }
 
@@ -424,9 +420,9 @@ input { font-family: inherit; }
     font-weight: 700;
 }
 
-.etiqueta-verde { background: rgba(0, 200, 150, 0.14); color: var(--verde); }
-.etiqueta-vermelha { background: rgba(255, 95, 109, 0.14); color: var(--vermelho); }
-.etiqueta-azul { background: rgba(79, 140, 255, 0.14); color: #6fa8ff; }
+.etiqueta-verde { background: #e8f5ec; color: var(--verde); }
+.etiqueta-vermelha { background: #fdecec; color: var(--vermelho); }
+.etiqueta-azul { background: #eaf1fd; color: #1d4ed8; }
 
 /* ---------- Formulário ---------- */
 
@@ -443,19 +439,19 @@ input { font-family: inherit; }
 .campo label { font-size: 12px; font-weight: 700; color: var(--texto-fraco); }
 
 .campo input {
-    background: var(--fundo-claro);
-    border: 1px solid var(--borda);
-    border-radius: 10px;
+    background: var(--fundo);
+    border: 1px solid var(--borda-forte);
+    border-radius: 8px;
     color: var(--texto);
-    padding: 11px 12px;
+    padding: 10px 12px;
     font-size: 14px;
     outline: none;
     width: 100%;
 }
 
 .campo input:focus {
-    border-color: var(--primaria-clara);
-    box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.25);
+    border-color: var(--primaria);
+    box-shadow: 0 0 0 3px rgba(24, 24, 27, 0.08);
 }
 
 /* ---------- Barra de ações da tabela ---------- */
@@ -479,20 +475,20 @@ input { font-family: inherit; }
 
 .busca-tabela input {
     flex: 1;
-    background: var(--fundo-claro);
-    border: 1px solid var(--borda);
-    border-radius: 10px;
+    background: var(--fundo);
+    border: 1px solid var(--borda-forte);
+    border-radius: 8px;
     color: var(--texto);
-    padding: 11px 14px;
+    padding: 10px 13px;
     font-size: 14px;
     outline: none;
 }
 
-.busca-tabela input:focus { border-color: var(--primaria-clara); }
+.busca-tabela input:focus { border-color: var(--primaria); }
 
 .contador-tabela { color: var(--texto-fraco); font-size: 13px; }
 
-/* ---------- Resumo do dia ---------- */
+/* ---------- Resumo ---------- */
 
 .resumo-dia {
     display: grid;
@@ -519,15 +515,14 @@ input { font-family: inherit; }
 
 .cartao-resumo .valor { font-size: 26px; font-weight: 800; margin-top: 6px; }
 .cartao-resumo .valor.verde { color: var(--verde); }
-.cartao-resumo .valor.roxo { color: var(--primaria-clara); }
+.cartao-resumo .valor.roxo { color: var(--texto); }
 
 /* ---------- Janela (modal) ---------- */
 
 .fundo-janela {
     position: fixed;
     inset: 0;
-    background: rgba(5, 8, 15, 0.75);
-    backdrop-filter: blur(4px);
+    background: rgba(0, 0, 0, 0.35);
     display: grid;
     place-items: center;
     z-index: 40;
@@ -538,15 +533,15 @@ input { font-family: inherit; }
     background: var(--cartao);
     border: 1px solid var(--borda);
     border-radius: var(--raio);
-    box-shadow: var(--sombra);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
     width: min(620px, 100%);
     max-height: 85vh;
     overflow-y: auto;
-    animation: surgir 0.2s ease;
+    animation: surgir 0.15s ease;
 }
 
 @keyframes surgir {
-    from { opacity: 0; transform: translateY(12px) scale(0.98); }
+    from { opacity: 0; transform: translateY(8px); }
 }
 
 /* ---------- Aviso (toast) ---------- */
@@ -556,17 +551,17 @@ input { font-family: inherit; }
     bottom: 24px;
     left: 50%;
     transform: translateX(-50%) translateY(20px);
-    background: var(--cartao-alto);
+    background: var(--fundo);
     border: 1px solid var(--borda);
     border-left: 4px solid var(--verde);
-    border-radius: 12px;
+    border-radius: 8px;
     padding: 13px 22px;
     font-weight: 700;
     font-size: 14px;
-    box-shadow: var(--sombra);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     opacity: 0;
     pointer-events: none;
-    transition: 0.25s;
+    transition: 0.2s;
     z-index: 50;
     max-width: calc(100vw - 40px);
 }
@@ -578,7 +573,7 @@ input { font-family: inherit; }
 
 .escondido { display: none !important; }
 
-/* ---------- Comemoração da venda (six seven) ---------- */
+/* ---------- Comemoração da venda ---------- */
 
 .fundo-comemoracao {
     position: fixed;
@@ -586,11 +581,10 @@ input { font-family: inherit; }
     z-index: 60;
     display: grid;
     place-items: center;
-    background: rgba(5, 8, 15, 0.78);
-    backdrop-filter: blur(6px);
+    background: rgba(0, 0, 0, 0.55);
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.25s ease;
+    transition: opacity 0.2s ease;
     overflow: hidden;
 }
 
@@ -598,7 +592,6 @@ input { font-family: inherit; }
 
 .comemoracao { text-align: center; position: relative; z-index: 3; }
 
-/* A imagem do "ai que delícia, cara", bem grandona */
 .imagem-comemoracao {
     display: block;
     height: 420px;
@@ -606,88 +599,50 @@ input { font-family: inherit; }
     max-width: 90vw;
     max-height: 60vh;
     margin: 0 auto 18px;
-    border-radius: 20px;
+    border-radius: 14px;
     object-fit: cover;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 0 3px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
 }
 
 .fundo-comemoracao.ativo .imagem-comemoracao {
-    animation: susto 0.65s cubic-bezier(0.2, 0.9, 0.3, 1.35) both;
+    animation: aparecer 0.35s ease both;
 }
 
-@keyframes susto {
-    0% { transform: scale(0.15) rotate(-10deg); opacity: 0; }
-    45% { transform: scale(1.22) rotate(4deg); opacity: 1; }
-    62% { transform: scale(0.94) rotate(-3deg); }
-    78% { transform: scale(1.08) rotate(1.5deg); }
-    100% { transform: scale(1) rotate(0deg); }
+@keyframes aparecer {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
 }
 
-/* Texto */
 .grito {
-    font-size: 42px;
+    font-size: 40px;
     font-weight: 900;
-    letter-spacing: 2px;
-    background: linear-gradient(90deg, #ff6b6b, #ff0000, #ff9f9f);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 4px 14px rgba(255, 0, 0, 0.55));
-    animation: tremerGrito 0.55s ease-in-out infinite;
-}
-
-@keyframes tremerGrito {
-    0%, 100% { transform: scale(1) rotate(-1deg); }
-    50% { transform: scale(1.06) rotate(1deg); }
+    letter-spacing: 1px;
+    color: #ef4444;
 }
 
 .texto-comemoracao {
     display: inline-block;
-    background: rgba(5, 8, 15, 0.72);
-    backdrop-filter: blur(6px);
-    border: 1px solid rgba(255, 255, 255, 0.14);
-    border-radius: 20px;
+    background: var(--fundo);
+    border: 1px solid var(--borda);
+    border-radius: 12px;
     padding: 18px 30px;
-    box-shadow: 0 16px 44px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
 .texto-comemoracao p { color: var(--texto-fraco); margin-top: 6px; font-weight: 600; }
 .texto-comemoracao .detalhe-venda-comemoracao { color: var(--verde); font-weight: 800; }
 
-/* Confete */
-.confete {
-    position: absolute;
-    top: -24px;
-    width: 9px;
-    height: 16px;
-    border-radius: 3px;
-    opacity: 0.9;
-    animation: cairConfete 2.2s linear infinite;
-}
-
-.confete:nth-child(1) { left: 6%; background: #ffd166; animation-delay: 0s; }
-.confete:nth-child(2) { left: 16%; background: #00c896; animation-delay: 0.4s; }
-.confete:nth-child(3) { left: 27%; background: #4f8cff; animation-delay: 0.9s; }
-.confete:nth-child(4) { left: 38%; background: #ff5f6d; animation-delay: 0.2s; }
-.confete:nth-child(5) { left: 52%; background: #ffd166; animation-delay: 1.1s; }
-.confete:nth-child(6) { left: 63%; background: #8b7df0; animation-delay: 0.6s; }
-.confete:nth-child(7) { left: 74%; background: #00c896; animation-delay: 0.1s; }
-.confete:nth-child(8) { left: 84%; background: #ff9f1a; animation-delay: 0.8s; }
-.confete:nth-child(9) { left: 93%; background: #4f8cff; animation-delay: 1.4s; }
-
-@keyframes cairConfete {
-    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
-    100% { transform: translateY(105vh) rotate(720deg); opacity: 0; }
-}
+/* Confete simplificado */
+.confete { display: none; }
 
 /* ---------- Clientes / Relatórios ---------- */
 
 .formulario-cliente { grid-template-columns: 2fr 1fr 1fr 1.4fr 2fr auto; }
 
 .campo-cliente {
-    background: var(--fundo-claro);
-    border: 1px solid var(--borda);
-    border-radius: 8px;
+    background: var(--fundo);
+    border: 1px solid var(--borda-forte);
+    border-radius: 6px;
     color: var(--texto);
     padding: 6px 8px;
     font-size: 13px;
@@ -696,8 +651,8 @@ input { font-family: inherit; }
 }
 
 .campo-cliente:focus {
-    border-color: var(--primaria-clara);
-    box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.25);
+    border-color: var(--primaria);
+    box-shadow: 0 0 0 3px rgba(24, 24, 27, 0.08);
 }
 
 .relatorio-filtros {
@@ -712,7 +667,7 @@ input { font-family: inherit; }
 .relatorio-filtros .campo-cliente {
     width: 100%;
     max-width: none;
-    padding: 11px 12px;
+    padding: 10px 12px;
     font-size: 14px;
 }
 
@@ -770,6 +725,6 @@ input { font-family: inherit; }
         max-width: 80vw;
         margin-bottom: 12px;
     }
-    .grito { font-size: 28px; }
+    .grito { font-size: 26px; }
     .texto-comemoracao { padding: 14px 18px; }
 }
