@@ -1,0 +1,22 @@
+# Banco de dados local (recriado automaticamente)
+database/*.sqlite
+database/*.sqlite-journal
+database/*.sqlite-wal
+database/*.sqlite-shm
+
+# Logs
+*.log
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.idea/
+.vscode/
+*.swp
+
+# Dependências (se um dia houver)
+node_modules/
+vendor/
